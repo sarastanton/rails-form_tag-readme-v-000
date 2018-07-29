@@ -581,3 +581,20 @@ Processing by PostsController#index as HTML
   [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
   Rendered posts/index.html.erb within layouts/application (1.4ms)
 Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 72.182.20.29 at 2018-07-29 01:28:39 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 272ms (Views: 260.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 72.182.20.29 at 2018-07-29 01:28:53 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SsiwyH1wlI+2KmXiJ9arZuuxdy85FEVfJvQyTM3OLfCLFqa3oeLeLFSiFF4q9WB2KheV4YH8duzTnd4JJ4xwSA==", "post"=>{"title"=>"Title for Post 2", "description"=>"This is my second post. How fancy ~~~ "}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Title for Post 2"], ["description", "This is my second post. How fancy ~~~ "], ["created_at", "2018-07-29 01:28:53.739494"], ["updated_at", "2018-07-29 01:28:53.739494"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+Redirected to http://174.138.35.103:35710/posts
+Completed 302 Found in 19ms (ActiveRecord: 3.2ms)
