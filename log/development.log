@@ -611,3 +611,10 @@ Started GET "/posts/new" for 72.182.20.29 at 2018-07-29 01:29:42 +0000
 Processing by PostsController#new as HTML
   Rendered posts/new.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 72.182.20.29 at 2018-07-29 01:38:25 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.2ms)
